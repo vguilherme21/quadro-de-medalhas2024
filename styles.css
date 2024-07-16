@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 50vw; /* Ajusta a largura do contêiner para 90% da largura da janela */
+}
+
+.logo-esquerda {
+    margin-left: 1%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px; /* Ajuste o tamanho da logo conforme necessário */
+}
+
+.logo-direita {
+    margin-right: 1%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px; /* Ajuste o tamanho da logo conforme necessário */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%; /* Ajusta a largura da tabela para 100% do contêiner */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.link-publico {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-publico a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-publico a:hover {
+    text-decoration: underline;
+}
