@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="adminPanel" style="display: none;">
         <h1>Painel Administrativo - Quadro de Medalhas</h1>
+        
+        <!-- Formulário para Adicionar Medalhas -->
         <div class="form-group">
             <label for="team">Nome da Equipe:</label>
             <input type="text" id="team" placeholder="Digite o nome da equipe">
@@ -20,10 +22,45 @@
             <input type="number" id="bronze" placeholder="Número de medalhas de bronze">
             <button onclick="addMedal()">Adicionar</button>
         </div>
+
+        <!-- Link para visualizar o quadro de medalhas -->
         <div class="link-publico">
             <a href="index.html" target="_blank">Visualizar Quadro de Medalhas</a>
         </div>
     </div>
+
+    <!-- Formulário de Login -->
+    <div class="container" id="loginFormContainer">
+        <h1>Login no Painel Administrativo</h1>
+        <form id="loginForm">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
     <script src="admin-script.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Aqui você pode verificar as credenciais (exemplo básico)
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            // Verificação de credenciais (substitua com sua lógica real)
+            if (username === 'admin' && password === 'senha123') {
+                // Mostrar o painel administrativo
+                document.getElementById('adminPanel').style.display = 'block';
+                document.getElementById('loginFormContainer').style.display = 'none'; // Esconder o formulário de login
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        });
+    </script>
 </body>
 </html>
